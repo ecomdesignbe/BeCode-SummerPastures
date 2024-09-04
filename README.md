@@ -13,7 +13,7 @@ Introduction to PHP for WordPress.
 - Functions
 
 **PART 2 (2 weeks)**
-Wordpress Theme development from scratch
+Wordpress Theme development from scratch > https://dev.ecomdesign.be/BeCode-SummerPastures
 
 - What is WordPress
 - Environment
