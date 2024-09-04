@@ -1,16 +1,4 @@
 # BeCode-SummerPastures
- PHP - Wordpress - Laravel
-
-### Planning
-
-**PART 1 (2-3 days)**
-Introduction to PHP for WordPress.
-
-- Variables
-- Data types
-- Conditionals
-- Loops
-- Functions
 
 **PART 2 (2 weeks)**
 Wordpress Theme development from scratch
@@ -33,9 +21,3 @@ Wordpress Theme development from scratch
 - Taxonomy
 - Search feature
 - Authentication
-
-**PART 3 (1-2 weeks)**
-
-- Fullstack website project
-
----
