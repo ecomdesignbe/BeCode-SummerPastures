@@ -1,15 +1,5 @@
 # Challenge
 
----
-
-I think now we could tackle a little challenge that goes a little beyond what we saw untill now.
-
-My plan is to give you this challenge, outline the things you should do in order to complete it, but without giving you any code.
-
-If you are reaaaaaly stuck, check the next chapters and come back to this challenge.
-
----
-
 Let's first establish the goal :
 
 - I run a news website where I post the latest news from the World.
