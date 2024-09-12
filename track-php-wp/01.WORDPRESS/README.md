@@ -7,7 +7,7 @@ Wordpress Theme development from scratch
 
 > https://dev.ecomdesign.be/MrDigital-ACF > ACF Tutorial
 
-> https://dev.ecomdesign.be/BeCode-SP-WPChallenge > WP Track Challenge 
+> https://dev.ecomdesign.be/BeCode-SP-WPChallenge > WP Track Challenge ([info](https://github.com/ecomdesignbe/BeCode-SummerPastures/blob/main/track-php-wp/01.WORDPRESS/CHALLENGE.md))
 
 - What is WordPress
 - Environment
