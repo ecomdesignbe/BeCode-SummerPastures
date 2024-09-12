@@ -15,9 +15,11 @@ Introduction to PHP for WordPress.
 **PART 2 (2 weeks)**
 Wordpress Theme development from scratch
 
-> https://dev.ecomdesign.be/BeCode-SummerPastures
+> https://dev.ecomdesign.be/BeCode-SummerPastures > WP Track
 
 > https://dev.ecomdesign.be/MrDigital-ACF > ACF Tutorial
+
+> https://dev.ecomdesign.be/BeCode-SP-WPChallenge > WP Track Challenge 
 
 - What is WordPress
 - Environment
