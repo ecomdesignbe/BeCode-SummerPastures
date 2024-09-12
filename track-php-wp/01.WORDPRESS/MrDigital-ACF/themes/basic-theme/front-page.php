@@ -1,16 +1,13 @@
 <?php 
     get_header();
-
-    /* ACF BASIC FIELD */ 
     $title = get_field('page_title');
-    $description = get_field('description');
-    $other_description = get_field('other_description');
-    $my_input = get_field('my_input');
 ?>
 
 <section class="page">
 
     <div class="container">
+
+        <?php the_field('phone', 'options'); ?>
 
         <h1><?php the_title();?></h1>
 
@@ -20,26 +17,31 @@
 
         <?php endwhile; else: endif; ?>
         
-        <!-- TEXT -->
-        <?php /* the_field('page_title'); or */ ?> 
         <?php if($title):?>            
             <h1> <?php echo $title; ?> </h1>
         <?php endif; ?>
 
-        <!-- TEXTAREA -->
-        <?php if($description): ?>
-            <p> <?php echo nl2br($description) ?> </p>
-        <?php endif; ?>
+        <?php if( have_rows('content')) : ?>
 
-        <!-- WYSIWYG EDITOR -->
-        <?php if($other_description):?>            
-            <?php echo $other_description; ?>
-        <?php endif; ?>
+            <?php while ( have_rows('content')) : the_row()?>
 
-        <?php if($my_input): ?>
-            <?php echo $my_input; ?>
-        <?php endif; ?>
+                <?php if(get_row_layout() == 'columns_section'): ?>
 
+                    <!-- > template_parts > section-columns.php -->
+                    <?php get_template_part('template_parts/section', 'columns'); ?>
+
+                <?php endif; ?>                
+
+                <?php if(get_row_layout() == 'textarea_with_image'): ?>
+
+                    <!-- > template_parts > section-textwithimage.php -->
+                    <?php get_template_part('template_parts/section', 'textwithimage'); ?>
+
+                <?php endif; ?>
+
+            <?php endwhile; ?>
+
+        <?php endif; ?>
 
     </div>
 </section>

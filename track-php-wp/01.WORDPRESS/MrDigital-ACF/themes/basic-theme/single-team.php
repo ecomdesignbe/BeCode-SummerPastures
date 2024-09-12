@@ -2,6 +2,9 @@
     get_header();
 
     $locations = get_field('locations');
+    $related_posts = get_field('related_post');
+
+
 ?>
 
 <section class="page">
@@ -14,16 +17,38 @@
 
         <?php endwhile; else: endif; ?>
 
-        <?php foreach ($locations as $location): ?>
-            <a href="<?php echo get_page_link($location->ID); ?>">
-                <img src="<?php echo get_the_post_thumbnail_url($location->ID, 'thumbnail') ?>">
-                <h3>
-                    <?php echo $location->post_title; ?>                
-                </h3>
-            </a>
-            <p><?php echo $location->post_content; ?></p>
-            
-        <?php endforeach; ?>
+        <?php foreach ($locations as $post): ?>
+
+            <?php setup_postdata( $post ); ?>
+
+            <?php echo the_title(); ?>
+
+            <?php the_field('address'); ?>
+
+        <?php wp_reset_postdata(); endforeach; ?>
+
+        <br /> <br /> 
+
+        <pre><?php echo print_r($related_posts);  ?></pre>
+
+        <br /> <br /> 
+
+        <?php if($related_posts): ?>
+
+            <ul class="list-group">
+                <?php foreach ($related_posts as $related_post): ?>
+                <li class="list-group-item">   
+                    <a href=" <?php echo get_the_permalink($related_post->ID);  ?>">
+                        <?php echo $related_post->post_title;  ?>
+                        <?php echo $related_post->post_content;  ?>
+                    </a>
+                </li>
+
+                <?php endforeach; ?>
+            </ul>
+        <?php endif; ?>
+
+
     </div>
 </section>
 

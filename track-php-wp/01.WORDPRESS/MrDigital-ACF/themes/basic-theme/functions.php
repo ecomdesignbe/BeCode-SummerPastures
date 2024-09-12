@@ -125,3 +125,42 @@ function my_first_taxonomy() {
 }
 
 add_action('init', 'my_first_taxonomy');
+
+
+if ( function_exists('acf_add_options_page')) {
+
+    acf_add_options_page(
+        array(
+
+            'page_title' => 'Website Settings',
+            'menu_title' => 'Website Settings',
+            'menu_slug' => 'website-settings',
+            'capability' =>  'edit_posts',
+            'icon_url' => 'dashicons-admin-tools',
+            'redirect' => true
+
+        )
+    );
+
+    
+    acf_add_options_sub_page(
+        array (
+
+            'page_title' => 'Contact Settings',
+            'menu_title' => 'Contact',
+            'parent_slug' => 'website-settings'
+
+        )
+    );
+
+    acf_add_options_sub_page(
+        array (
+
+            'page_title' => 'Design Settings',
+            'menu_title' => 'Design',
+            'parent_slug' => 'website-settings'
+
+        )
+    );
+    
+}
