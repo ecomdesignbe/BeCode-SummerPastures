@@ -10,5 +10,12 @@
 <body <?php body_class(); ?>>
     <header>
         <p>HEADER</p>
+        <?php 
+            wp_nav_menu(   
+                array ( 
+                    'theme_location' => 'main-menu' 
+                ) 
+            ); 
+        ?>
         <hr>        
     </header>    
