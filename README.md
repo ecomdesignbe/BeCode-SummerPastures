@@ -21,6 +21,8 @@ Wordpress Theme development from scratch
 
 > https://dev.ecomdesign.be/BeCode-SP-WPChallenge > WP Track Challenge ([info](https://github.com/ecomdesignbe/BeCode-SummerPastures/blob/main/track-php-wp/01.WORDPRESS/CHALLENGE.md))
 
+> https://dev.ecomdesign.be/BeCode-SP-Cinema > Custom Post Types Challenge
+
 - What is WordPress
 - Environment
 - Project structure and setup
