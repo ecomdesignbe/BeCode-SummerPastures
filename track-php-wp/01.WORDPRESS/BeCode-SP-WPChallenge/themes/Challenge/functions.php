@@ -60,5 +60,22 @@
 
     // Add Featured Images or Post Thumbnails
     add_theme_support( 'post-thumbnails' );
+
+    // register a custom post type for recipes
+    function register_recipes_post_type() {
+        $args = array(
+            'labels' => array(
+            'name' => __( 'Recipes' ),
+            'singular_name' => __( 'Recipe' )
+            ),
+            'public' => true,
+            'show_in_rest' => true,
+            'supports' => array('title', 'editor', 'thumbnail')
+            // And many many others config !
+        );
+        register_post_type( 'recipes', $args );
+    }
+    
+    add_action( 'init', 'register_recipes_post_type' );
 ?>
 
