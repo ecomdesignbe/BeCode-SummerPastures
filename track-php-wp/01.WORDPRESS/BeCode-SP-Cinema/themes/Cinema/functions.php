@@ -46,6 +46,19 @@
     add_action('admin_init', function () {
         remove_post_type_support('post', 'editor');
     });
+    
+    /* Disable the editor for Movies. */
+    add_action('admin_init', function () {
+        remove_post_type_support('movies', 'editor');
+    });  
+    
+    /* Disable the editor for Actors. */
+    add_action('admin_init', function () {
+        remove_post_type_support('actors', 'editor');
+    });
+
+    
+    
 
     // Add Menu 
     function register_menus() { 
@@ -62,7 +75,7 @@
     add_theme_support( 'post-thumbnails' );
 
     // register a custom post type for recipes
-    function register_recipes_post_type() {
+/*    function register_recipes_post_type() {
         $args = array(
             'labels' => array(
             'name' => __( 'Recipes' ),
@@ -77,5 +90,42 @@
     }
     
     add_action( 'init', 'register_recipes_post_type' );
+*/
+function register_movies_post_type() {
+    $args = array(
+        'labels' => array(
+            'name' => __( 'Movies' ),
+            'singular_name' => __( 'Movie' )
+        ),
+        'public' => true,
+        'show_in_rest' => true,
+        'supports' => array('title', 'editor', 'thumbnail'),
+        // And many many others config !
+        'menu_icon' => 'dashicons-video-alt'
+        );
+        register_post_type( 'movies', $args );
+    }
+    
+    add_action( 'init', 'register_movies_post_type' );
+
+    
+function register_actors_post_type() {
+    $args = array(
+        'labels' => array(
+            'name' => __( 'Actors' ),
+            'singular_name' => __( 'Actor' )
+        ),
+        'public' => true,
+        'show_in_rest' => true,
+        'supports' => array('title', 'editor', 'thumbnail'),
+        // And many many others config !
+        'menu_icon' => 'dashicons-admin-users'
+        );
+        register_post_type( 'actors', $args );
+    }
+    
+    add_action( 'init', 'register_actors_post_type' );
+
+    
 ?>
 
