@@ -44,6 +44,7 @@ Wordpress Theme development from scratch
 
 **PART 3 (1-2 weeks)**
 
-- Fullstack website project
+> https://dev.ecomdesign.be/BeCode-SP-Cinema > Fullstack website project
+
 
 ---
